@@ -1,5 +1,7 @@
 # Open Energy Methods
 
+<p align="center"><img src="../assets/OEM_symbol_avatar_512.png" alt="Open Energy Methods approved energy-flow symbol" width="152" /></p>
+
 **Making computational energy research independently verifiable.**
 
 Open Energy Methods (OEM) is an independent, founder-led open-source research-software initiative. We develop reusable tools, tests, and benchmark methods for detecting physical, numerical, and data-consistency errors in engineering computations.
@@ -31,6 +33,8 @@ EnerLint is an experimental Python toolkit for *scope-limited* independent check
 ### Get involved
 
 Explore [EnerLint](https://github.com/Open-Energy-Methods/enerlint), open a reproducible issue, or propose a reference problem. A contribution is not a guarantee of paid work, authorship, advisory status, or organizational endorsement.
+
+**Brand:** [Approved OEM logo artwork](../assets/OEM_approved_lockup_1100.png) · [Square avatar](../assets/OEM_symbol_avatar_512.png)
 
 **Website:** [openenergymethods.org](https://openenergymethods.org) *(domain planned; website launch pending)*.
 
