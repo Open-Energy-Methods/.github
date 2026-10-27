@@ -1,0 +1,30 @@
+name: Scientific research spike
+description: Time-box a novel method, baseline comparison or unknown engineering constraint.
+title: "SPIKE | "
+labels: ["agile:spike", "workflow:backlog", "type:research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Falsifiable question and why it matters
+    validations:
+      required: true
+  - type: textarea
+    id: prior
+    attributes:
+      label: Prior-art baselines and available references
+    validations:
+      required: true
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Proposed experiment or bounded literature review
+      description: Include evidence limitations and decision criteria.
+    validations:
+      required: true
+  - type: textarea
+    id: exit
+    attributes:
+      label: Exit condition, stop/pivot rule, and expected deliverable
+    validations:
+      required: true
