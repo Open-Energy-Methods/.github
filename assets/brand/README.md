@@ -1,16 +1,24 @@
-# Open Energy Methods — approved brand assets
+# Open Energy Methods — founder-approved vector identity
 
-These files are exact, unmodified copies of the founder-approved primary SVG logo and symbol supplied on 27 October 2026.
+The seven files below reproduce the original approved vector artwork and alternate palette variants supplied by the founder on 27 October 2026. The glyphs/paths, typography and geometry are unchanged. **Use these instead of the archived initial raster exports.**
 
-| Use | Asset | SVG viewBox |
-| --- | --- | --- |
-| Primary horizontal lockup | [oem-logo-full-primary.svg](oem-logo-full-primary.svg) | `0 0 1296 546` |
-| Standalone square-ish organization symbol | [oem-logo-symbol-primary.svg](oem-logo-symbol-primary.svg) | `0 0 562 546` |
+| Asset | Use | Main colors |
+|---|---|---|
+| [Full primary](oem-logo-full-primary.svg) | Main wordmark on light backgrounds | Navy `#0C2B47`, teal `#3B787E` |
+| [Symbol primary](oem-logo-symbol-primary.svg) | Icons, app/project marks, square-ish avatars | Navy, teal |
+| [Full reversed](oem-logo-full-reversed.svg) | Wordmark on dark backgrounds | Ivory `#F4F6F2`, aqua `#6FB0B4` |
+| [Symbol reversed](oem-logo-symbol-reversed.svg) | Icon on dark backgrounds | Ivory, aqua |
+| [Full mono navy](oem-logo-full-mono-navy.svg) | One-ink wordmark on light backgrounds | Navy |
+| [Full mono white](oem-logo-full-mono-white.svg) | One-ink wordmark on dark backgrounds | White |
+| [Symbol mono navy](oem-logo-symbol-mono-navy.svg) | Simple one-ink icon | Navy |
 
-- Source artwork authored externally and provided directly by the project founder; do not treat it as generated from code in this repository.
-- Primary source colors include deep navy `#0C2B47` and teal `#3B787E`.
-- Preserve the source SVG paths, proportions, negative space and original typography.
-- Other raster exports in the organization are legacy/historical and are not the authoritative vector sources.
-- For GitHub's actual organization avatar, the owner must still upload a compatible square export in **Organization Settings**; the repository does not automatically set the avatar.
+**Primary SVG dimensions:** horizontal `viewBox="0 0 1296 546"`; symbol `viewBox="0 0 562 546"`. These are source-artwork aspect ratios, not already-padded 1:1 canvas exports.
 
-**Usage and rights:** This document is not a blanket license grant for external reuse of the OEM identity. Public availability of artwork does not change the licenses of scientific software repositories. Record permitted uses and asset provenance in the organization's rights register.
+### Rules
+- Do not distort, redraw, combine with unrelated scientific motifs, or imply external scientific accreditation.
+- Keep a light version on light backgrounds and a reversed/white version on dark backgrounds.
+- Reference centrally maintained assets from dependent OEM repositories.
+- The GitHub **organization avatar** itself is set through the owner's GitHub Settings; committing the SVG does not change the account picture.
+
+### Legal note
+These SVGs are founder-provided identity assets; publishing files in this repository does **not** implicitly place the logo under the MIT software license or a public-domain dedication. Brand use and third-party reuse permissions must be explicitly determined in the OEM rights register.
