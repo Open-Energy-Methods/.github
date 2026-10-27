@@ -1,60 +1,106 @@
-# Create the OEM organization GitHub Project
+# EnerLint GitHub Project — live board operating guide
 
-## Current state and access limitation
+**Updated:** 27 October 2026 · **Project:** [EnerLint | Development & Research Roadmap](https://github.com/orgs/Open-Energy-Methods/projects/1) · **Project v2 number:** 1
 
-Repositories, issues, colored labels, stage milestones, epics and sprint planning tickets are already created. However, **the organization-level GitHub Project v2 must be created in the GitHub interface**: the connected repository automation token does not have organization Projects GraphQL access. A repo-level `GITHUB_TOKEN` cannot create or administer an organization Project. Do not put personal access tokens in source or issues.
+This is an *existing* organization GitHub Project—not a request to create another one. It currently holds the EnerLint scientific tickets. For at least October 2026–October 2027, Open Energy Methods is Abhijith's independent open engineering research workbench, not a commercial venture or staffed institute.
 
-**One board for two repositories:** `Open-Energy-Methods/enerlint` and `Open-Energy-Methods/.github`.
+## Important access boundary
 
-## Create once (organization owner)
+Connected GitHub repository tools can edit issue content, issue labels, assignees, milestones and state. They **cannot currently mutate GitHub Projects v2 item Status, Priority, Estimate, Start date or Target date fields; nor can they rename/edit Project views**, because those fields and layouts require organization Projects GraphQL permissions that are not exposed by the connected tool.
 
-1. Open https://github.com/orgs/Open-Energy-Methods/projects and click **New project**.
-2. Start from **Board**, or an available Team planning template. Name it **OEM | Science & Venture Delivery**. Set visibility to public only if all included items are safe to disclose.
-3. Configure built-in **Status** single-select to: `Backlog`, `To Do`, `In Progress`, `In Review`, `Blocked`, `Done` (and optionally `Won't Do`). Board layout: group by Status.
-4. Add **Iteration** named `Sprint`, duration **2 weeks**, initial anchor **27 October 2026**. Alternatively select an available 2-week iteration spanning S0.
-5. Add project fields: `Stream` (EnerLint / OEM), `Epic` (E1–E8), `Story points` (number), `Severity` (Critical/High/Medium/Low), `Priority` (P0/P1/P2), `Stage` (G0–G4), optionally `Target date`. Use existing organization **Issue Fields** for Priority/Effort where they are already available instead of duplicating them.
-6. **Backfill existing work manually:** in Project Table view, click **+ → Add item from repository**, select `enerlint`, bulk-select its open issues and click **Add selected items**; repeat for `.github`. GitHub's auto-add does **not** retroactively import existing issues.
-7. **Future issues:** in Project **Workflows → Auto-add to project**, select `enerlint` with filter `is:issue`. **GitHub Free allows only one auto-add workflow**, so `.github` issues require manual additions unless your plan allows more workflows or you configure a properly authorized GitHub App. Built-in **Item added to project** should set Status to **Backlog** (not To Do for everything). Built-in **Item closed** can set Done; check closed-not-planned treatment before relying on completion charts.
-8. Reconcile Sprint, Severity, Priority and Story points from existing labels; Project fields are canonical once configured.
+An issue label like `workflow:in-progress` is useful metadata but **does not itself move the Project item to the In Progress column**. An issue's planning date in its body is likewise **not** the Project's native Target date.
 
-## Views
+The instructions below are an exact owner-facing finishing checklist. Avoid saying the Project view was updated unless its native field has actually been changed and verified.
 
-| View | Layout | Scope |
-| --- | --- | --- |
-| **Scrum board** | Board | Group by Status; all work streams; filter `-status:Done` for working view. |
-| **Current sprint** | Board | Sprint/current iteration, group by Status. |
-| **Product backlog** | Table | All open issues, sorted Priority → Severity, show assignee, Stage, Epic, points, milestone. |
-| **Epics** | Table | `label:agile:epic`; inspect cross-repo linked checklists. |
-| **Release gates** | Roadmap | Milestones G0–G4; review timing, dependencies, risks. |
-| **Severity & risks** | Table | Critical/High severity, open only. |
-| **Team workload** | Table | Group by Assignees, show points/iteration. |
-| **Delivered** | Table/chart | Closed completed issues, grouped by sprint/stream. |
+## Live views and desired configuration
 
-## Native GitHub Issue Types and fields
+### [1 · Backlog](https://github.com/orgs/Open-Energy-Methods/projects/1/views/1)
 
-**Native Issue Types are complete:** all nine types listed in [OEM's type taxonomy](NATIVE_ISSUE_TYPES.md) are active, and every issue in both repositories now has the correct native Type. The GitHub Project and its typed **Priority**, **Severity**, **Iteration** and **Status** fields are *not yet created*; configure those after creating the organization-level Project. Issue Types and Project fields are separate features.
+**Use:** all uncommitted research problems, future experiments and optional explorations.
 
-After creating the Project, populate its structured fields from the currently labeled issues. Do not duplicate or recreate the native Issue Types; they are already installed and synchronized.
+- **Layout:** Table.
+- **Filter:** `status:Backlog`, optionally `is:open` if supported by the Projects filter.
+- **Fields:** Title, Status, Priority, Estimate, Assignees, Labels, Milestone.
+- **Sort:** Priority then estimate/size where supported.
+- **Rule:** don't push G2/G3 external-review or commercial ideas into the active sprint just to make the board look busy.
 
-## Initial sprint plan
+### [2 · Priority board](https://github.com/orgs/Open-Energy-Methods/projects/1/views/2)
 
-- [S0](https://github.com/Open-Energy-Methods/.github/issues/34): five stories / **16 tentative points**, starting 27 Oct.
-- [S1](https://github.com/Open-Energy-Methods/.github/issues/35): four stories / 16 tentative points.
-- [S2](https://github.com/Open-Energy-Methods/.github/issues/36): three stories / 16 tentative points.
-- [S3](https://github.com/Open-Energy-Methods/.github/issues/37): three stories / 16 tentative points.
+**Use:** the day-to-day Kanban, with real WIP limits.
 
-## Security
+- **Layout:** Board grouped by **Status** (not by cosmetic priority labels).
+- **Columns:** Backlog · To Do · In Progress · In Review · Blocked · Done. Map any existing status choices to these names; create missing choices only if necessary.
+- **Filter:** current two-week research tasks where practical (e.g. `label:sprint:S0`), or retain all items but visually prioritize the current sprint. GitHub Projects filters can use issue labels when they're on the synced item.
+- **Card fields:** Priority, Estimate, Assignees, Target date.
+- **WIP limit:** at most **two** In Progress issues for a solo maintainer. Prefer one. Never count To Do as begun.
+- **Definition of Done:** acceptance evidence linked, applicable CI green, rights/claims respected, issue closed **completed**, Project Status Done. Close `not_planned` issues as Won't Do—not Done.
 
-No need to provide a PAT to any chat or commit. GitHub's native Auto-add and Status workflows can perform the first board automation without any stored token.
+### [3 · Team items → recommended rename: Maintainer workload](https://github.com/orgs/Open-Energy-Methods/projects/1/views/3)
 
-## Verification after setup
+**Use:** clarify what Abhijith owns and what remains unclaimed rather than imply a research staff/team.
 
-- Board includes **both** repositories and eight epics.
-- At least five S0 stories appear in the current iteration under To Do.
-- Native Priority/Severity/Iteration columns are populated rather than merely color labels.
-- Closing a completed story moves it to Done; marking one not planned does not falsely count as delivered.
-- Filtering by repo, severity, sprint, assignee and issue type works.
+- **Layout:** Table grouped by Assignees (currently this tab already groups assigned and unassigned issues).
+- **Filter:** open items; show active To Do / In Progress / In Review / Blocked first; hide future Backlog if it obscures current workload.
+- **Fields:** Status, Priority, Estimate, Start date, Target date, Labels, Milestone.
+- **Owner:** assign current sprint work to `abhijith-sivaprasadan`. Do not assign future reviewers or collaborators without consent.
+- **Interpretation:** 30 unassigned backlog items are future possibilities, not overdue tasks or a team staffing gap.
 
-Official docs: https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+### [4 · Roadmap](https://github.com/orgs/Open-Energy-Methods/projects/1/views/4)
 
-GitHub sources: [Auto-add limitations](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/adding-items-automatically) and [Bulk add from repository](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project). The number of auto-add workflows allowed depends on the GitHub plan.
+**Use:** a credible sequence of research questions, not a fake product/company launch calendar.
+
+- **Layout:** Roadmap/time scale using Project **Start date** and **Target date**.
+- **Fields:** Title, Status, Priority, Milestone, Estimate.
+- **Time horizon:** 27 October–9 November for the current execution slice, with next-stage work later only as tentative planning.
+- **Only date issues with real near-term intent**. Treat independent reviewer feedback, external data rights and third-party solver comparisons as *dependencies*, not date promises.
+- **Roadmap sequence:** boundary/contracts → evidence claim policy → property/datum constraints → CI audit → alpha release decision. External validation remains subsequent work.
+
+### [5 · My items](https://github.com/orgs/Open-Energy-Methods/projects/1/views/5)
+
+**Use:** the personal research queue.
+
+- **Layout:** Table or Board, filtered `assignee:@me` and open work.
+- **Group/sort:** Status first, then Priority and nearest Target date.
+- **Fields:** Status, Priority, Target date, Estimate; hide the unnecessary Team/Size duplication.
+- **Expected current workload:** five explicitly assigned research/maintenance issues. Closed-completed issues may be shown in a separate delivered/retrospective view, but not mixed with open work.
+
+## Two-week S0 owner queue (27 October–9 November 2026)
+
+The **issue records** below have been updated with assignee, labels, estimates, exact planning dates and acceptance conditions. Project fields still require owner-side entry until an authorized Projects integration is available.
+
+| Issue | Planned Project Status | Priority | Estimate | Start | Target |
+|---|---|---|---:|---|---|
+| [EnerLint #8 — Physical control-volume contracts](https://github.com/Open-Energy-Methods/enerlint/issues/8) | **In Progress** | P0 | 5 | 27 Oct | **31 Oct** |
+| [EnerLint #6 — Scientific evidence/claim policy](https://github.com/Open-Energy-Methods/enerlint/issues/6) | To Do | P0 | 2 | 1 Nov | **2 Nov** |
+| [EnerLint #15 — Property/datum acceptance policy](https://github.com/Open-Energy-Methods/enerlint/issues/15) | To Do | P0 | 3 | 2 Nov | **5 Nov** |
+| [EnerLint #16 — CI, security and reproducibility](https://github.com/Open-Energy-Methods/enerlint/issues/16) | To Do | P0 | 3 | 5 Nov | **7 Nov** |
+| [EnerLint #5 — Alpha release-readiness metadata](https://github.com/Open-Energy-Methods/enerlint/issues/5) | To Do | P0 | 2 | 7 Nov | **9 Nov** |
+
+**Total outstanding committed effort: 15 estimated points, not a promise of 15 hours.** Estimates may be revised after S0. This roster supersedes any startup-first sprint template that presumes KTH Innovation outreach or venture preparation must be delivered this month.
+
+Already completed and suitable for Done **only if their items are present in the Project**: [#13 distribution installation](https://github.com/Open-Energy-Methods/enerlint/issues/13), [#17 benchmark case-card specification](https://github.com/Open-Energy-Methods/enerlint/issues/17), and [#7 report schema](https://github.com/Open-Energy-Methods/enerlint/issues/7). Each issue is closed as completed and has a `workflow:done` label.
+
+**Keep in Backlog:** [#3 external tolerance critique](https://github.com/Open-Energy-Methods/enerlint/issues/3), [#9 ten reviewed analytical reference cases](https://github.com/Open-Energy-Methods/enerlint/issues/9), [#18 native-tool comparative experiment](https://github.com/Open-Energy-Methods/enerlint/issues/18), [#25 independent review](https://github.com/Open-Energy-Methods/enerlint/issues/25), and conditional new research domains. These require separate bounded tasks, real external evidence or reviewers.
+
+## Exact finishing operations in the GitHub UI
+
+1. In the [Project](https://github.com/orgs/Open-Energy-Methods/projects/1), use **Backlog** table and search by `#8`, `#6`, `#15`, `#16`, `#5` (or find each issue by its title). For those existing items, enter Project **Status** values from the table. Do not make duplicate project items.
+2. Populate the existing Project **Priority** field as `P0` for those five, **Estimate** as 5/2/3/3/2 and **Start date/Target date** as above. If the board offers `Size` instead of Estimate, select one canonical effort field rather than both.
+3. For **Priority board**, group by Status; keep one In Progress item. For **Team items**, optionally rename to `Maintainer workload`. For **My items**, set the assignee filter to `@me`.
+4. For **Roadmap**, select the new populated date fields and verify five entries are visible in the intended window.
+5. In **Workflows**, confirm the native rules `Item closed → Done` and `Item reopened → Backlog` are configured. This is independent of the issue-label workflow. Ensure `Closed as not planned` does not enter Done for delivery metrics.
+6. Preserve/snapshot [Backlog](https://github.com/orgs/Open-Energy-Methods/projects/1/views/1), [Priority board](https://github.com/orgs/Open-Energy-Methods/projects/1/views/2), [Maintainer workload](https://github.com/orgs/Open-Energy-Methods/projects/1/views/3), [Roadmap](https://github.com/orgs/Open-Energy-Methods/projects/1/views/4), and [My items](https://github.com/orgs/Open-Energy-Methods/projects/1/views/5), and verify the same five issues appear consistently. A connected repo tool cannot confirm Project-field writes.
+
+## Ongoing lifecycle for our future work
+
+- When a real task starts: update the issue `workflow:todo → workflow:in-progress`, add a concise implementation note, and **also** move its Project Status to `In Progress` through an authorized Project interface.
+- When a result is ready for review: change label to `workflow:in-review` and Project Status to `In Review`, include exact commits, tests and CI evidence.
+- When accepted: close issue as **completed** (the repository workflow applies `workflow:done`); verify Project Status **Done**, either via an enabled Project automation or a manual field edit.
+- When blocked: put a short public-safe blocker explanation in the issue, then set both issue `workflow:blocked` and Project Status `Blocked`. Do not pretend a third-party review has happened.
+- Avoid turning the board into a company hiring plan. Only the engineering workbench's actual tasks belong in active lanes.
+
+## Permissions and security
+
+Do not share PATs or paste credentials into chats, issues or repository files. An authorized GitHub Projects integration or Work-mode browser interaction is needed for view/field mutations; repository-scoped Actions tokens are not automatically allowed to modify organization Project fields.
+
+See [Agile playbook](AGILE_PLAYBOOK.md), [scientific programme](https://github.com/Open-Energy-Methods/enerlint/issues/36), and the [one-year workbench plan](WORKBENCH_PLAN_2026_2027.md).
