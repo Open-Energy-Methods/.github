@@ -4,8 +4,8 @@
 
 | Sprint | Stories | Planned points | Completed points | Progress | To Do | In Progress | In Review | Blocked | Backlog |
 | :-- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
-| [S0](https://github.com/Open-Energy-Methods/.github/issues/34) | 5 | 16 | 0 | 0% | 5 | 0 | 0 | 0 | 0 |
-| [S1](https://github.com/Open-Energy-Methods/.github/issues/35) | 4 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 4 |
+| [S0](https://github.com/Open-Energy-Methods/.github/issues/34) | 5 | 16 | 3 | 19% | 4 | 0 | 0 | 0 | 0 |
+| [S1](https://github.com/Open-Energy-Methods/.github/issues/35) | 4 | 16 | 3 | 19% | 0 | 0 | 0 | 0 | 3 |
 | [S2](https://github.com/Open-Energy-Methods/.github/issues/36) | 3 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 3 |
 | [S3](https://github.com/Open-Energy-Methods/.github/issues/37) | 3 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 3 |
 
@@ -14,7 +14,7 @@
 | Epic | Linked issues | Completed | Progress |
 | :-- | --: | --: | --: |
 | [OEM identity, governance, rights and scientific integrity](https://github.com/Open-Energy-Methods/.github/issues/26) | 8 | 0 | 0% |
-| [EnerLint rigorous thermal verification core](https://github.com/Open-Energy-Methods/.github/issues/27) | 10 | 0 | 0% |
+| [EnerLint rigorous thermal verification core](https://github.com/Open-Energy-Methods/.github/issues/27) | 10 | 2 | 20% |
 | [Negative controls, benchmarks and independent differentiation](https://github.com/Open-Energy-Methods/.github/issues/28) | 7 | 0 | 0% |
 | [Interoperability and approved external scientific pilots](https://github.com/Open-Energy-Methods/.github/issues/29) | 9 | 0 | 0% |
 | [Trustworthy packaging, research UX and open-source release](https://github.com/Open-Energy-Methods/.github/issues/30) | 9 | 0 | 0% |
