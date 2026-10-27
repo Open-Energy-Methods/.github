@@ -1,0 +1,100 @@
+name: Refresh OEM sprint progress dashboard
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 6 * * 1-5'
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/sprint-progress.yml
+permissions:
+  contents: write
+  issues: read
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Calculate delivered points from issue states
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, json, os, urllib.request, urllib.error, re
+          token=os.environ["GH_TOKEN"]
+          org="Open-Energy-Methods"
+          repo=f"{org}/.github"
+          headers={"Accept":"application/vnd.github+json","User-Agent":"OEM-Sprint-Report","X-GitHub-Api-Version":"2022-11-28","Authorization":f"Bearer {token}"}
+          def api(method,url,payload=None):
+              content=json.dumps(payload).encode() if payload is not None else None
+              req=urllib.request.Request(url,data=content,headers=headers,method=method)
+              if content: req.add_header("Content-Type","application/json")
+              try:
+                  with urllib.request.urlopen(req,timeout=45) as resp:
+                      raw=resp.read()
+                      return json.loads(raw) if raw else {}
+              except urllib.error.HTTPError as exc:
+                  if exc.code==404:return None
+                  raise RuntimeError(f"GitHub API failed: {exc.code} for {url.split('?')[0]}: {exc.read()[:250]}") from exc
+          issues=[]
+          for name in ("enerlint",".github"):
+              for page in range(1,4):
+                  entries=api("GET",f"https://api.github.com/repos/{org}/{name}/issues?state=all&per_page=100&page={page}")
+                  if not isinstance(entries,list):break
+                  for item in entries:
+                      if "pull_request" in item:continue
+                      labs={x["name"] for x in item.get("labels",[])}
+                      item["_labels"]=labs
+                      item["_stream"]=name
+                      issues.append(item)
+                  if len(entries)<100:break
+          def points(item):
+              v=[x[7:] for x in item["_labels"] if x.startswith("points:")]
+              return int(v[0]) if len(v)==1 and v[0].isdigit() else 0
+          def done(item):
+              return item["state"]=="closed" and item.get("state_reason") not in ("not_planned","duplicate")
+          def state(item):
+              if done(item):return "Done"
+              if item["state"]=="closed":return "Won't Do"
+              for v,label in [("blocked","Blocked"),("in-review","In Review"),("in-progress","In Progress"),("todo","To Do"),("backlog","Backlog")]:
+                  if "workflow:"+v in item["_labels"]:return label
+              return "Unclassified"
+          lines=["# Open Energy Methods — sprint progress","","> Automatically generated from public GitHub issues. Story points indicate **relative estimates**, not elapsed hours or formal engineering validation.","", "| Sprint | Stories | Planned points | Completed points | Progress | To Do | In Progress | In Review | Blocked | Backlog |", "| :-- | --: | --: | --: | --: | --: | --: | --: | --: | --: |"]
+          for sprint in ("S0","S1","S2","S3"):
+              stories=[x for x in issues if "agile:story" in x["_labels"] and "sprint:"+sprint in x["_labels"] and points(x)>0]
+              total=sum(points(x) for x in stories)
+              passed=sum(points(x) for x in stories if done(x))
+              count=lambda status:sum(1 for x in stories if state(x)==status)
+              lines.append(f"| [{sprint}](https://github.com/{org}/.github/issues/{34+('S0','S1','S2','S3').index(sprint)}) | {len(stories)} | {total} | {passed} | {(100*passed/total if total else 0):.0f}% | {count('To Do')} | {count('In Progress')} | {count('In Review')} | {count('Blocked')} | {count('Backlog')} |")
+          lines+=["","## Sprint definitions","",
+          "- **S0:** 27 October–8 November 2026; initial sprint selected but effort estimates may change.",
+          "- **S1:** 9–22 November 2026; tentative.",
+          "- **S2:** 23 November–6 December 2026; tentative.",
+          "- **S3:** 7–20 December 2026; tentative.","",
+          "## Epics and research programme","",
+          f"- Eight epics in [{org}/.github](https://github.com/{org}/.github/issues?q=is%3Aissue+label%3Aagile%3Aepic).",
+          f"- [EnerLint scientific master tracker](https://github.com/{org}/enerlint/issues/36).",
+          f"- [OEM organizational master tracker](https://github.com/{org}/.github/issues/25).",
+          "",
+          "**Definition of delivered:** GitHub issue is closed with a completion reason. Closed as *not planned* and \`workflow:done\` without issue closure are not counted. In Review is **not** delivered.",
+          "",
+          "Open scientific limitations, fault escapes, data permissions and scientific review questions remain in their linked individual issues. These metrics are work tracking, not a model verification result.",
+          "",
+          "_Generated by \`.github/workflows/sprint-progress.yml\` from repository API snapshots. See the GitHub Actions run history for the most recent execution._",""]
+          content="\n".join(lines)+"\n"
+          path="docs/SPRINT_STATUS.md"
+          url=f"https://api.github.com/repos/{repo}/contents/{path}"
+          old=api("GET",url)
+          current=base64.b64decode(old["content"]).decode() if old and old.get("content") else ""
+          if content==current:
+              print("Sprint report already current.")
+          else:
+              payload={"message":"docs: refresh sprint progress from issue completion evidence",
+                       "content":base64.b64encode(content.encode()).decode(),"branch":"main"}
+              if old:payload["sha"]=old["sha"]
+              result=api("PUT",url,payload)
+              print("Sprint report written at",result["content"]["html_url"])
+          print("\n".join(lines[:9]))
+          
+          PY
