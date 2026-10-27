@@ -68,7 +68,7 @@ A lightweight live-ish report can be generated at `docs/SPRINT_STATUS.md`. GitHu
 
 ## GitHub Project setup
 
-See [Project v2 configuration and limitation](PROJECT_SETUP.md) for the organization-level board, built-in filters, issue types, severity fields and automatic addition. **The connected GitHub integration cannot create GitHub Projects v2 or org-scoped Issue Types**; those require GitHub UI/authorized Projects credentials.
+See [Project v2 configuration and limitation](PROJECT_SETUP.md) for the organization-level board, built-in filters, issue types, severity fields and automatic addition. **All native Issue Types are already created and synchronized.** The connected GitHub integration still cannot create the organization-wide GitHub Projects v2 board; that remains an organization-owner UI step.
 
 ## Scientific safeguards
 
