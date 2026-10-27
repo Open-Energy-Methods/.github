@@ -1,5 +1,13 @@
 # Open Energy Methods — Community and Organization Profile
 
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-reversed.svg">
+    <img src="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-primary.svg" alt="Open Energy Methods — full approved navy and teal logo" width="460">
+  </picture>
+</p>
+
 This repository provides the GitHub organization profile, community health files, and shared scientific contribution standards for **Open Energy Methods (OEM)**.
 
 The organization homepage is maintained in [`profile/README.md`](profile/README.md). The official visual identity is based on the founder-approved navy/teal Open Energy Methods logo; its approved vector assets are maintained in [`assets/brand/`](assets/brand/).

@@ -2,8 +2,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="../assets/brand/oem-logo-symbol-reversed.svg">
-    <img src="../assets/brand/oem-logo-symbol-primary.svg" alt="Open Energy Methods approved energy-flow symbol" width="152">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-reversed.svg">
+    <img src="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-primary.svg" alt="Open Energy Methods — full approved navy and teal logo" width="560">
   </picture>
 </p>
 

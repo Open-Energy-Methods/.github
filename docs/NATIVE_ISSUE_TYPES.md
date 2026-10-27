@@ -56,3 +56,23 @@ New tickets are initialized from the issue templates and receive type assignment
 Do not edit the native Type arbitrarily while retaining a conflicting `type:*` or `agile:*` label; the next synchronization can legitimately restore the mapping.
 
 For native type API semantics and permission requirements, see the [official GitHub documentation](https://docs.github.com/en/rest/orgs/issue-types).
+
+## Recommended native type palette — eight GitHub colors for nine types
+
+GitHub offers only eight preset native Issue Type colors. The organization maintains nine native types, so one color must be repeated. The following is the **proposed UI color allocation**, not an API-applied settings change:
+
+| Native type | GitHub palette color | Tickets at palette review | Rationale |
+| --- | --- | ---: | --- |
+| Task | Gray | 21 | Neutral operational work, frequently used |
+| Feature | Yellow | 3 | Planned new capability |
+| Story | Green | 15 | User-visible accepted increment |
+| Research | Blue | 13 | Scientific inquiry and evidence |
+| Experiment | Orange | 9 | Controlled tests and comparisons |
+| Bug | Red | 0 | Correctness defects requiring attention |
+| Epic | Purple | 8 | Cross-ticket delivery outcome |
+| Initiative | Pink | 2 | Portfolio-level strategic exploration |
+| Spike | Pink | 0 | Time-boxed discovery; shares color only with a sparsely used strategic type |
+
+This creates **one duplicated color**, shared by **Initiative (2)** and **Spike (0)**, leaving every frequently used category visually distinct. Types remain identified by their text, not just color. Usage counts are based on the 71 tickets audited on 27 October 2026 and will change.
+
+**Organization-owner UI action:** open **Settings → Planning → Issue types**, open each type's **⋯ → Edit** control, and set the palette colors above. The linked GitHub repository connector can modify tickets and source files but cannot change organization-level native type colors. Do not confuse those native colors with configurable HEX label colors.
