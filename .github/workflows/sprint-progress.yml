@@ -79,7 +79,7 @@ jobs:
               linked=[index[k] for k in refs if k in index]
               count=sum(1 for issue in linked if done(issue))
               pct=100*count/len(linked) if linked else 0
-              title=epic["title"].split(" | ")[0]
+              title=epic["title"]
               lines.append(f"| [{title}](https://github.com/Open-Energy-Methods/.github/issues/{epic['number']}) | {len(linked)} | {count} | {pct:.0f}% |")
           lines+=["","## Sprint definitions","",
           "- **S0:** 27 October–8 November 2026; initial sprint selected but effort estimates may change.",
