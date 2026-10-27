@@ -1,47 +1,51 @@
 # Open Energy Methods
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-primary.svg" alt="Open Energy Methods — full-color navy and teal logo" width="560">
+  <a href="https://open-energy-methods.github.io/">
+    <img src="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-primary.svg" alt="Open Energy Methods — full-color navy and teal logo" width="500">
+  </a>
 </p>
 
-**Making computational energy research independently verifiable.**
+### The model ran. But is it right?
 
-Open Energy Methods (OEM) is an independent, founder-led open-source research-software initiative. We develop reusable tools, tests, and benchmark methods for detecting physical, numerical, and data-consistency errors in engineering computations.
+Hi, I'm **Abhijith**. I started Open Energy Methods as a place to explore engineering questions that kept coming up in my work with thermodynamics, numerical models and energy systems.
 
-We focus on **verification alongside existing software**, not replacing established research and engineering modeling tools.
+A simulation completing successfully is not proof that its results make physical sense. Sometimes a balance check finds an obvious mistake. Sometimes the balances close, but the underlying operating point is still wrong.
 
-### First project: [EnerLint](https://github.com/Open-Energy-Methods/enerlint)
+I find that second case especially interesting.
 
-EnerLint is an experimental Python toolkit for *scope-limited* independent checking of exported energy-engineering model results, beginning with steady-state mass and first-law energy balances, storage accounting, and deliberately corrupted reference cases.
+**This is an open workbench, not a finished research institute.** I want to build small, useful methods; test them against difficult cases and existing tools; document what they miss; and make the source and reasoning available for others to examine.
 
-**Scientific boundary:** passing a numerical or conservation check is not experimental validation, confirmation of modeling assumptions, engineering certification, or a guarantee of safe operation. The initial evidence is synthetic/hand-derived; external-model benchmarking is still required.
+## First experiment: [EnerLint](https://github.com/Open-Energy-Methods/enerlint)
 
-### Research directions
+EnerLint is an experimental Python toolkit for checking *specified* physical properties of exported energy-model results. The first version deals with steady mass and energy balances and one-interval thermal storage accounting.
 
-- Thermal and industrial energy conversion
-- Electrical power systems and energy-storage modeling
-- Independent numerical benchmarks and fault-injection testing
-- Scientific software quality, explicit provenance, and reproducibility
+The deliberately modest starting tests include:
 
-### Scientific commitments
+- Four hand-constructed reference cases that pass their declared checks.
+- Six developer-selected altered cases that trigger expected failures.
+- **One compensating error that escapes**, even though the result looks perfectly balanced.
 
-1. Publish assumptions, system boundaries, sign conventions, input units, and numerical tolerances.
-2. Separate **verification**, **validation**, and **scientific inference**.
-3. Retain failing cases, undetected errors, negative results, and known limitations.
-4. Use independently specified reference cases where possible; never treat a solver's status flag as ground truth.
-5. Follow upstream licenses and respect confidential or proprietary research data.
-6. Welcome reproducible issues, externally sourced benchmarks, and constructive critical review.
+That last case is a feature of the research record, not a result to hide. These tests are not measurements, industrial validation, independently measured detection rates, or a claim that EnerLint improves on existing tools.
 
-### Get involved
+**[Read the worked example: why a passing energy balance isn't proof](https://open-energy-methods.github.io/notes/001-a-pass-isnt-proof.html)**
 
-Explore [EnerLint](https://github.com/Open-Energy-Methods/enerlint), open a reproducible issue, or propose a reference problem. A contribution is not a guarantee of paid work, authorship, advisory status, or organizational endorsement.
+## What I'm working toward
 
-**Brand:** [Approved horizontal vector logo](../assets/brand/oem-logo-full-primary.svg) · [Approved symbol vector](../assets/brand/oem-logo-symbol-primary.svg)
+For now, the questions are practical: can the equations be checked independently? Are the boundaries and units defensible? How often does this add value beyond a modelling package's own diagnostics? And can someone else reproduce the answer without me helping?
 
-**LinkedIn:** [Open Energy Methods](https://www.linkedin.com/company/open-energy-methods)
+Over time, I hope OEM becomes home to more open methods for energy modelling and scientific computation—**only when they prove useful enough to maintain**.
 
-**Website:** [open-energy-methods.github.io](https://open-energy-methods.github.io/) (official public homepage). A separate custom domain remains a future option.
+## Where the questions came from
+
+Some of my other personal projects explore [thermodynamic simulation](https://github.com/abhijith-sivaprasadan/thermotwin), [steam and power modelling](https://github.com/abhijith-sivaprasadan/opensteamopt), and [regional energy-system evidence](https://github.com/abhijith-sivaprasadan/kerala2040). They have informed my curiosity, but they are **not automatically OEM-owned modules** or external validation for EnerLint.
+
+## Come challenge the work
+
+If you model physical systems, an edge case or a reason a check is redundant is genuinely useful. You can [open an EnerLint issue](https://github.com/Open-Energy-Methods/enerlint/issues), read the [verification contract](https://github.com/Open-Energy-Methods/enerlint/blob/main/docs/VERIFICATION_CONTRACT.md), or follow the [experimental roadmap](https://github.com/Open-Energy-Methods/enerlint/blob/main/docs/ROADMAP.md).
+
+**[Website and field notes](https://open-energy-methods.github.io/)** · **[LinkedIn](https://www.linkedin.com/company/open-energy-methods)** · **[Brand assets](../assets/brand/)**
 
 ---
 
-<sub>Open Energy Methods is not currently a registered corporation or nonprofit, an accredited verification body, or an official initiative of KTH or another institution.</sub>
+<sub>Open Energy Methods is an independent, founder-led open-source initiative. It is not currently a registered company or nonprofit, an accredited verification body, or an official KTH or other institutional initiative.</sub>
