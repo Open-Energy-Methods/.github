@@ -40,7 +40,7 @@ Explore [EnerLint](https://github.com/Open-Energy-Methods/enerlint), open a repr
 
 **LinkedIn:** [Open Energy Methods](https://www.linkedin.com/company/open-energy-methods)
 
-**Website:** [openenergymethods.org](https://openenergymethods.org) *(domain planned; website launch pending)*.
+**Website:** [open-energy-methods.github.io](https://open-energy-methods.github.io/) (official public homepage). A separate custom domain remains a future option.
 
 ---
 
