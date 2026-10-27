@@ -1,0 +1,28 @@
+name: Epic
+description: Define an outcome requiring multiple linked research stories or tasks.
+title: "EPIC | "
+labels: ["agile:epic", "workflow:backlog", "type:governance"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome and end-user benefit
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Measurable completion conditions
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Linked issues across OEM repositories
+      description: Use full issue URLs for cross-repository links.
+  - type: textarea
+    id: risks
+    attributes:
+      label: Dependencies, risks and scientific limits
+    validations:
+      required: true
