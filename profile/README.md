@@ -38,6 +38,8 @@ Explore [EnerLint](https://github.com/Open-Energy-Methods/enerlint), open a repr
 
 **Brand:** [Approved horizontal vector logo](../assets/brand/oem-logo-full-primary.svg) · [Approved symbol vector](../assets/brand/oem-logo-symbol-primary.svg)
 
+**LinkedIn:** [Open Energy Methods](https://www.linkedin.com/company/open-energy-methods)
+
 **Website:** [openenergymethods.org](https://openenergymethods.org) *(domain planned; website launch pending)*.
 
 ---
