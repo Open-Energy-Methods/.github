@@ -28,7 +28,7 @@ Severity labels on planning tasks represent hypothetical **failure impact**. Do 
 1. Create a single **organization-level GitHub Project**: `OEM | Scientific & Venture Roadmap` (table + board + roadmap views).
 2. Add both repositories' issues; project fields: `Status` (Backlog, Ready, In Progress, In Review, Blocked, Done), `Priority` (P0–P2), `Severity` (Critical/High/Medium/Low), `Stream` (EnerLint/OEM), `Stage` (G0–G4), and optional `Effort` (XS/S/M/L).
 3. Create GitHub **milestones** separately in each repository (they are repo-local): `G0 | Foundation (2026-11)`, `G1 | Thermal core (2026-12)`, `G2 | External evidence (2027-03)`, `G3 | Pilot (2027-06)`, `G4 | Conditional growth (2027+)`. Dates are targets, not commitments.
-4. Define native **organization Issue Types**, if supported and available: Task, Feature, Bug; use GitHub issue type only when appropriately supported. Our `type:...` labels provide the more granular research taxonomy meanwhile.
+4. **Completed:** all nine native organization Issue Types are active (Initiative, Epic, Story, Research, Experiment, Spike, Task, Feature, Bug) and classified across all 71 issues. See [the verified type registry](NATIVE_ISSUE_TYPES.md); `type:*` labels remain useful for automation and filter colors.
 5. Color label families in GitHub's label settings: P0/P1/P2, severity, type, area and stage. This connector can apply labels but cannot set their colors.
 6. Only assign items to people who actually accept maintenance responsibility. A planned external scientific reviewer is not an assignee or adviser without consent.
 
