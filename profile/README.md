@@ -1,6 +1,11 @@
 # Open Energy Methods
 
-<p align="center"><img src="../assets/brand/oem-logo-symbol-primary.svg" alt="Open Energy Methods approved energy-flow symbol" width="152" /></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/brand/oem-logo-symbol-reversed.svg">
+    <img src="../assets/brand/oem-logo-symbol-primary.svg" alt="Open Energy Methods approved energy-flow symbol" width="152">
+  </picture>
+</p>
 
 **Making computational energy research independently verifiable.**
 
