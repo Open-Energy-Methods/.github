@@ -19,6 +19,7 @@ OEM is an independent open-source engineering research workbench, not an incorpo
 ## Research projects and maintenance backlog
 
 - [OEM research workbench direction (2026–27)](https://github.com/Open-Energy-Methods/.github/issues/25)
+- [One-year workbench plan and experiment publishing standard](docs/WORKBENCH_PLAN_2026_2027.md)
 - [EnerLint scientific roadmap](https://github.com/Open-Energy-Methods/enerlint/issues/36)
 - [Agile playbook: epics, stories, definition of done, sprints](docs/AGILE_PLAYBOOK.md)
 - [Colored label and risk-triage conventions](docs/ISSUE_TRIAGE_AND_PROJECTS.md)
