@@ -32,9 +32,9 @@ This is the public operational companion to [issue triage and project convention
 
 **Backlog → To Do → In Progress → In Review → Done**. **Blocked** can be entered from any active state and requires a blocker link or explanation. Cancelled work is `Won't Do`.
 
-Before the actual GitHub Project exists, colored `workflow:*` labels are the fallback. A GitHub Action ensures at most one workflow label on an issue and applies `workflow:done` when closed as completed; closed as not planned goes to `workflow:wont-do`.
+For the existing [EnerLint GitHub Project](https://github.com/orgs/Open-Energy-Methods/projects/1), Project Status is the canonical Kanban lane. Colored `workflow:*` issue labels are the connected repository integration's currently writable fallback. A GitHub Action ensures at most one workflow label and applies `workflow:done` when closed as completed; closed as not planned goes to `workflow:wont-do`. **Issue labels do not automatically change Project v2 Status.**
 
-After the Project exists, its **Status** field is the main source of truth. Status labels remain lightweight searchable metadata but are **not automatically synced** with Project fields; do not use contradictory values or treat a label as a project field.
+Use the Project's **Status** field as the main source of truth for cards. Status labels remain lightweight searchable metadata but are **not automatically synced** with Project fields. Record the evidence in the issue before closing; reconcile both statuses through an authorized Project UI or automation.
 
 ## Severity vs. priority
 
@@ -68,7 +68,7 @@ A lightweight live-ish report can be generated at `docs/SPRINT_STATUS.md`. GitHu
 
 ## GitHub Project setup
 
-See [Project v2 configuration and limitation](PROJECT_SETUP.md) for the organization-level board, built-in filters, issue types, severity fields and automatic addition. **All native Issue Types are already created and synchronized.** The connected GitHub integration still cannot create the organization-wide GitHub Projects v2 board; that remains an organization-owner UI step.
+See [the live five-view Kanban and owner-queue guide](PROJECT_SETUP.md) for Backlog, Priority board, Maintainer workload, Roadmap and My items. The OEM scientific workbench plan, not venture growth, controls the active backlog. **All native Issue Types are already created and synchronized.** The organization Project is now live. The connected GitHub integration can maintain repository issues and labels but **cannot edit Project v2 views or structured item fields**; the owner must configure those in GitHub (or switch to an authorized browser-assisted workflow).
 
 ## Scientific safeguards
 
