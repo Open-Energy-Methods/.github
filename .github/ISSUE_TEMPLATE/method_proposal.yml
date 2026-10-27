@@ -1,0 +1,23 @@
+name: New verification method proposal
+description: Propose a scoped independent numerical verification check or adapter.
+title: "[Method] "
+labels: []
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scientific question and proposed check
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Independent reference and validation strategy
+      description: Explain where trustworthy expected results and negative controls will come from.
+    validations:
+      required: true
+  - type: textarea
+    id: priorart
+    attributes:
+      label: Prior art and differentiation
+      description: Identify existing software doing the same calculation, and why this adds value.

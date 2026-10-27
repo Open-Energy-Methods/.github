@@ -1,0 +1,31 @@
+name: Numerical or scientific verification defect
+description: Report a reproducible inconsistency or incorrect verification result.
+title: "[Scientific bug] "
+labels: []
+body:
+  - type: textarea
+    id: case
+    attributes:
+      label: Reproducible case
+      description: Share minimal, non-confidential inputs and the command or API call.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Independently expected behavior
+      description: State governing equations, assumptions, units, sign convention, and reference calculation.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include version and full non-sensitive diagnostics.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limitations and data provenance
+      description: Say whether the case uses synthetic, measured, or externally published data.

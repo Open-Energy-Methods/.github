@@ -1,9 +1,7 @@
-# Open Energy Methods — community repository
+# Open Energy Methods — Community and Organization Profile
 
-This repository contains the organization profile and community-wide collaboration guidance for **Open Energy Methods**, an independent open-source scientific software initiative.
+This repository provides the GitHub organization profile, community health files, and shared scientific contribution standards for **Open Energy Methods (OEM)**.
 
-The public-facing profile is maintained in [`profile/README.md`](profile/README.md).
+The organization homepage is maintained in [`profile/README.md`](profile/README.md). The official visual identity is based on the founder-approved navy/teal Open Energy Methods logo; logo assets are not yet included in this repository.
 
-Our purpose is to develop independently tested, reproducible tools and benchmarks that help researchers examine numerical and physical consistency in energy-engineering models.
-
-We are not an incorporated company, an accredited verification authority, or an official KTH organization.
+OEM is an independent, early-stage open-source initiative, not an incorporated entity, a university unit, or a certification authority.
