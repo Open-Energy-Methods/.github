@@ -9,6 +9,19 @@
 | [S2](https://github.com/Open-Energy-Methods/.github/issues/36) | 3 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 3 |
 | [S3](https://github.com/Open-Energy-Methods/.github/issues/37) | 3 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 3 |
 
+## Epic progress
+
+| Epic | Linked issues | Completed | Progress |
+| :-- | --: | --: | --: |
+| [EPIC E1](https://github.com/Open-Energy-Methods/.github/issues/26) | 0 | 0 | 0% |
+| [EPIC E2](https://github.com/Open-Energy-Methods/.github/issues/27) | 0 | 0 | 0% |
+| [EPIC E3](https://github.com/Open-Energy-Methods/.github/issues/28) | 0 | 0 | 0% |
+| [EPIC E4](https://github.com/Open-Energy-Methods/.github/issues/29) | 0 | 0 | 0% |
+| [EPIC E5](https://github.com/Open-Energy-Methods/.github/issues/30) | 0 | 0 | 0% |
+| [EPIC E6](https://github.com/Open-Energy-Methods/.github/issues/31) | 0 | 0 | 0% |
+| [EPIC E7](https://github.com/Open-Energy-Methods/.github/issues/32) | 0 | 0 | 0% |
+| [EPIC E8](https://github.com/Open-Energy-Methods/.github/issues/33) | 0 | 0 | 0% |
+
 ## Sprint definitions
 
 - **S0:** 27 October–8 November 2026; initial sprint selected but effort estimates may change.
