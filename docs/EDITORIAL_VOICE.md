@@ -1,6 +1,6 @@
 # Open Energy Methods — editorial voice and evidence rules
 
-**Status:** living founder-facing editing guide · 27 October 2026
+**Status:** living creator-facing editing guide · updated 27 October 2026
 
 This exists because an open-source research workbench started sounding like a fully staffed scientific company. That is not the reality or the voice we want to communicate.
 
@@ -12,11 +12,11 @@ The approved navy/teal visual identity stays. The problem was not a lack of poli
 
 Scientific discipline is the backbone. Personal curiosity is the voice. Neither replaces the other.
 
-## The person behind the initiative
+## Creator and maintainer
 
-Open Energy Methods was started by **Abhijith Sivaprasadan**, an energy engineer working with thermodynamics, energy-system modelling and numerical methods. It is currently founder-led and early stage, not a university lab, registered company, certification body, or formal multi-person research group.
+Open Energy Methods was created and is maintained by **Abhijith Sivaprasadan**, an energy engineer working with thermodynamics, energy-system modelling and numerical methods. It is an independent open-source engineering research workbench, not a university lab, registered company, certification body or formal multi-person research group. When a role title is needed, use **Creator & Maintainer**, not Founder/CEO or Lead Maintainer.
 
-The author can write **“I”** on the website, public notes and founder updates. Avoid institutional **“we”** when the work was done by one person. Future contributions should receive specific attribution and may appropriately change the pronouns.
+The author can write **“I”** on the website, public notes and project updates. Avoid institutional **“we”** when the work was done by one person. Future contributions should receive specific attribution and may appropriately change the pronouns.
 
 Do **not** invent autobiographical incidents or imply that a specific past simulation was defective unless the founder verifies that event and its evidence. Curiosity about a possible failure is not testimony that it occurred.
 
@@ -57,17 +57,17 @@ The before examples are anti-patterns, not descriptions of verified past claims.
 - “Independent” means a separately implemented *specified check*, not an independent laboratory, reference dataset or accreditation.
 - A conservation pass does **not** prove the model's parameters, operating point, assumptions or measurements are correct.
 - A published repository, GitHub Actions success, LinkedIn page or software DOI does not create scientific validation, a legal company, or a funded research role.
-- Founder personal repositories can be linked as influences, but are not automatically OEM assets. Permission/IP/provenance review precedes copying code or data.
+- The creator's other repositories can be linked as influences, but are not automatically OEM assets. Permission/IP/provenance review precedes copying code or data.
 - No unfounded KTH, Siemens Energy, reviewer, collaborator, customer, or institutional endorsement.
 
 These restrictions apply equally to energetic social posts and to formal scientific documents.
 
 ## Different surfaces have different jobs
 
-- **OEM website:** approachable technical workbench, first-person notes, examples, negative cases, reasons to care.
+- **OEM website:** approachable technical workbench, actual engineering projects, first-person notes, examples, negative cases and reasons to care.
 - **Organization GitHub profile:** concise origin, what exists, how to examine the work, who maintains it.
 - **EnerLint README:** developer-facing installation and physical contracts; a short truthful origin note, not marketing copy.
-- **LinkedIn company page:** small, authentic human description; actual project updates; avoid investor-deck language.
+- **LinkedIn:** individual projects or Featured links are appropriate; if a branded page is maintained, use a small authentic description and actual project updates, never investor-deck language. OEM is not automatically an employment entry.
 - **Technical docs and research bible:** explicit hypotheses, source registers, definitions, numerical contracts, evidence hierarchy, legal boundaries. Do not make formal research imprecise merely to sound personal.
 
 ## Every new public claim gets a five-question check
@@ -76,9 +76,9 @@ These restrictions apply equally to energetic social posts and to formal scienti
 2. **What is observable now?** Link to code, a benchmark result or a source.
 3. **What is only planned?** Mark it unambiguously.
 4. **What would falsify the claim?** Record native-tool alternatives and missed errors.
-5. **Would the founder naturally say this?** If not, rewrite or remove it.
+5. **Would the creator naturally say this?** If not, rewrite or remove it.
 
-Any AI-assisted copy should be reviewed and adjusted by the founder before being treated as his own first-person account. AI may organize and edit material; it may not invent motivations, memories, technical accomplishments or collaborators.
+Any AI-assisted copy should be reviewed and adjusted by the creator before being treated as his own first-person account. AI may organize and edit material; it may not invent motivations, memories, technical accomplishments or collaborators.
 
 ## Preferred public starting point
 
@@ -87,6 +87,14 @@ Any AI-assisted copy should be reviewed and adjusted by the founder before being
 > I started Open Energy Methods to investigate the space between a simulation finishing and an engineering result making sense. EnerLint is my first attempt at checking a small part of that problem. The source, the assumptions and the failures are open.
 
 This is a working editorial direction, not a required script. It can—and should—evolve in the founder's own words.
+
+## Direction for 2026–27
+
+OEM is a **personal research and engineering workspace with a distinct open identity**. The primary outputs are open-source engineering projects, simulation and numerical models, experimental case studies, documented research methods and field notes. They should stand on their own with accessible evidence and appropriately scoped claims.
+
+EnerLint's verification focus does **not** obligate every future OEM project to be a verification tool. Publishing a useful negative result or imperfect experiment counts; claiming a release, external review or commercial readiness without evidence does not.
+
+Avoid website sections or issue milestones designed chiefly to imply company growth, customer acquisition, a services business, staff or revenue. Revisit possible collaboration or legal incorporation only if later warranted. This is a direction for public communication and research priorities, not a claim about permanent organizational form.
 
 ## How this is maintained
 
