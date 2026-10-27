@@ -32,7 +32,7 @@ Repositories, issues, colored labels, stage milestones, epics and sprint plannin
 
 ## Native GitHub Issue Types and fields
 
-On the organization **Settings**, set up issue types **Epic**, **Feature**, **Task**, **Bug** and optionally **Research spike** where supported. Native issue types are distinct from the `type:*` and `agile:*` labels. The GitHub May 2026 rollout also made structured Issue Fields available to organizations; prefer an org **Severity** field for typed cross-repository management, while keeping severity labels for filtering and visible color.
+In organization **Settings → Planning → Issue types**, configure the native types from [OEM's type taxonomy](NATIVE_ISSUE_TYPES.md) (Initiative, Epic, Story, Research, Experiment, Spike in addition to the built-in Task, Bug, Feature). Native issue types are distinct from the `type:*` and `agile:*` labels. The GitHub May 2026 rollout also made structured Issue Fields available to organizations; prefer an org **Severity** field for typed cross-repository management, while keeping severity labels for filtering and visible color.
 
 To set this up: navigate to organization Settings and search **Issue types** / **Issue fields** (availability and labels vary). Configure types/fields and backfill them through the Projects UI. Do not assume these native values were filled automatically from issue labels.
 
