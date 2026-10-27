@@ -1,0 +1,29 @@
+name: Reproducible software defect
+description: Report a behavior that conflicts with a documented numerical or software contract.
+title: "BUG | "
+labels: ["type:bug", "workflow:backlog"]
+body:
+  - type: textarea
+    id: reproducible
+    attributes:
+      label: Reproduction command, environment and minimal non-confidential inputs
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed result and affected version
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Independently justified expected behavior
+      description: Include equations/units/tolerances where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: consequence
+    attributes:
+      label: Impact and proposed severity
+      description: Severity is consequence, not scheduling priority; do not claim real safety incidents without evidence.
