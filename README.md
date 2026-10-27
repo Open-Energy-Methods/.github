@@ -11,6 +11,7 @@ OEM is an independent, early-stage open-source initiative, not an incorporated e
 - [EnerLint scientific roadmap](https://github.com/Open-Energy-Methods/enerlint/issues/36)
 - [Agile playbook: epics, stories, definition of done, sprints](docs/AGILE_PLAYBOOK.md)
 - [Colored label and risk-triage conventions](docs/ISSUE_TRIAGE_AND_PROJECTS.md)
+- [Native GitHub Issue Types and manual organization setup](docs/NATIVE_ISSUE_TYPES.md)
 - [Cross-repository GitHub Project setup](docs/PROJECT_SETUP.md)
 - [Automatically calculated sprint progress](docs/SPRINT_STATUS.md)
 
