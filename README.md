@@ -2,10 +2,7 @@
 
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-reversed.svg">
-    <img src="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-primary.svg" alt="Open Energy Methods — full approved navy and teal logo" width="460">
-  </picture>
+  <img src="https://raw.githubusercontent.com/Open-Energy-Methods/.github/main/assets/brand/oem-logo-full-primary.svg" alt="Open Energy Methods — full-color navy and teal logo" width="460">
 </p>
 
 This repository provides the GitHub organization profile, community health files, and shared scientific contribution standards for **Open Energy Methods (OEM)**.
