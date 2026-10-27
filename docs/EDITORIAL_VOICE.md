@@ -70,6 +70,8 @@ These restrictions apply equally to energetic social posts and to formal scienti
 - **LinkedIn:** individual projects or Featured links are appropriate; if a branded page is maintained, use a small authentic description and actual project updates, never investor-deck language. OEM is not automatically an employment entry.
 - **Technical docs and research bible:** explicit hypotheses, source registers, definitions, numerical contracts, evidence hierarchy, legal boundaries. Do not make formal research imprecise merely to sound personal.
 
+**Scientific claim gate for EnerLint:** before describing a model as "verified", "validated", "calibrated", "reliable", "certified" or "accredited", consult the [EnerLint scientific claims policy](https://github.com/Open-Energy-Methods/enerlint/blob/main/docs/SCIENTIFIC_CLAIM_POLICY.md) and its [18 supported/rejected wording examples](https://github.com/Open-Energy-Methods/enerlint/blob/main/docs/claim_examples_v0.1.json). The project's V0–V5 vocabulary is **OEM-proposed**, not ASME levels or proof that external validation occurred. Personal voice does not relax the evidence requirement.
+
 ## Every new public claim gets a five-question check
 
 1. **Who did this?** Author/maintainer attribution is real.
