@@ -13,8 +13,9 @@ Repositories, issues, colored labels, stage milestones, epics and sprint plannin
 3. Configure built-in **Status** single-select to: `Backlog`, `To Do`, `In Progress`, `In Review`, `Blocked`, `Done` (and optionally `Won't Do`). Board layout: group by Status.
 4. Add **Iteration** named `Sprint`, duration **2 weeks**, initial anchor **27 October 2026**. Alternatively select an available 2-week iteration spanning S0.
 5. Add project fields: `Stream` (EnerLint / OEM), `Epic` (E1–E8), `Story points` (number), `Severity` (Critical/High/Medium/Low), `Priority` (P0/P1/P2), `Stage` (G0–G4), optionally `Target date`. Use existing organization **Issue Fields** for Priority/Effort where they are already available instead of duplicating them.
-6. Add all issues from both repositories. Project **Workflows → Auto-add to project**: source each repo, filter `is:issue`. Built-in **Item added to project** set Status to **Backlog** (not To Do for everything). Built-in **Item closed** set Done; consider treating closed-not-planned separately.
-7. Reconcile Sprint, Severity, Priority and Story points from existing labels; Project fields are canonical once configured.
+6. **Backfill existing work manually:** in Project Table view, click **+ → Add item from repository**, select `enerlint`, bulk-select its open issues and click **Add selected items**; repeat for `.github`. GitHub's auto-add does **not** retroactively import existing issues.
+7. **Future issues:** in Project **Workflows → Auto-add to project**, select `enerlint` with filter `is:issue`. **GitHub Free allows only one auto-add workflow**, so `.github` issues require manual additions unless your plan allows more workflows or you configure a properly authorized GitHub App. Built-in **Item added to project** should set Status to **Backlog** (not To Do for everything). Built-in **Item closed** can set Done; check closed-not-planned treatment before relying on completion charts.
+8. Reconcile Sprint, Severity, Priority and Story points from existing labels; Project fields are canonical once configured.
 
 ## Views
 
@@ -55,3 +56,5 @@ No need to provide a PAT to any chat or commit. GitHub's native Auto-add and Sta
 - Filtering by repo, severity, sprint, assignee and issue type works.
 
 Official docs: https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+
+GitHub sources: [Auto-add limitations](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/adding-items-automatically) and [Bulk add from repository](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project). The number of auto-add workflows allowed depends on the GitHub plan.
