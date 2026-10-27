@@ -67,6 +67,20 @@ jobs:
               passed=sum(points(x) for x in stories if done(x))
               count=lambda status:sum(1 for x in stories if state(x)==status)
               lines.append(f"| [{sprint}](https://github.com/{org}/.github/issues/{34+('S0','S1','S2','S3').index(sprint)}) | {len(stories)} | {total} | {passed} | {(100*passed/total if total else 0):.0f}% | {count('To Do')} | {count('In Progress')} | {count('In Review')} | {count('Blocked')} | {count('Backlog')} |")
+          index={(x["_stream"],x["number"]):x for x in issues}
+          epics=sorted((x for x in issues if "agile:epic" in x["_labels"]),key=lambda x:x["number"])
+          lines+=["","## Epic progress","",
+          "| Epic | Linked issues | Completed | Progress |",
+          "| :-- | --: | --: | --: |"]
+          for epic in epics:
+              refs=set((stream,int(number)) for stream,number in re.findall(
+                  r"https://github\\.com/Open-Energy-Methods/(enerlint|\\.github)/issues/(\\d+)",
+                  epic.get("body") or ""))
+              linked=[index[k] for k in refs if k in index]
+              count=sum(1 for issue in linked if done(issue))
+              pct=100*count/len(linked) if linked else 0
+              title=epic["title"].split(" | ")[0]
+              lines.append(f"| [{title}](https://github.com/Open-Energy-Methods/.github/issues/{epic['number']}) | {len(linked)} | {count} | {pct:.0f}% |")
           lines+=["","## Sprint definitions","",
           "- **S0:** 27 October–8 November 2026; initial sprint selected but effort estimates may change.",
           "- **S1:** 9–22 November 2026; tentative.",
