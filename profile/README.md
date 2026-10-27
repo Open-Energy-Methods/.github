@@ -1,6 +1,6 @@
 # Open Energy Methods
 
-<p align="center"><img src="../assets/OEM_symbol_avatar_512.png" alt="Open Energy Methods approved energy-flow symbol" width="152" /></p>
+<p align="center"><img src="../assets/brand/oem-logo-symbol-primary.svg" alt="Open Energy Methods approved energy-flow symbol" width="152" /></p>
 
 **Making computational energy research independently verifiable.**
 
@@ -34,7 +34,7 @@ EnerLint is an experimental Python toolkit for *scope-limited* independent check
 
 Explore [EnerLint](https://github.com/Open-Energy-Methods/enerlint), open a reproducible issue, or propose a reference problem. A contribution is not a guarantee of paid work, authorship, advisory status, or organizational endorsement.
 
-**Brand:** [Approved OEM logo artwork](../assets/OEM_approved_lockup_1100.png) · [Square avatar](../assets/OEM_symbol_avatar_512.png)
+**Brand:** [Approved horizontal vector logo](../assets/brand/oem-logo-full-primary.svg) · [Approved symbol vector](../assets/brand/oem-logo-symbol-primary.svg)
 
 **Website:** [openenergymethods.org](https://openenergymethods.org) *(domain planned; website launch pending)*.
 
