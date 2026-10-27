@@ -8,13 +8,13 @@
 
 ### The model ran. But is it right?
 
-Hi, I'm **Abhijith**. I started Open Energy Methods as a place to explore engineering questions that kept coming up in my work with thermodynamics, numerical models and energy systems.
+Hi, I'm **Abhijith Sivaprasadan**, **Creator & Maintainer** of Open Energy Methods. This is my independent, open-source workspace for energy-engineering projects, experiments, numerical models, research methods and field notes.
 
 A simulation completing successfully is not proof that its results make physical sense. Sometimes a balance check finds an obvious mistake. Sometimes the balances close, but the underlying operating point is still wrong.
 
 I find that second case especially interesting.
 
-**This is an open workbench, not a finished research institute.** I want to build small, useful methods; test them against difficult cases and existing tools; document what they miss; and make the source and reasoning available for others to examine.
+**This is an open engineering workbench, not a company or a research institute.** I want to make the source, assumptions, tests, failures and lessons from my projects available for others to inspect, reproduce and build upon.
 
 ## First experiment: [EnerLint](https://github.com/Open-Energy-Methods/enerlint)
 
@@ -30,11 +30,11 @@ That last case is a feature of the research record, not a result to hide. These 
 
 **[Read the worked example: why a passing energy balance isn't proof](https://open-energy-methods.github.io/notes/001-a-pass-isnt-proof.html)**
 
-## What I'm working toward
+## What belongs on the workbench
 
-For now, the questions are practical: can the equations be checked independently? Are the boundaries and units defensible? How often does this add value beyond a modelling package's own diagnostics? And can someone else reproduce the answer without me helping?
+For the next year, the main objective is straightforward: publish engineering work that is technically substantive, inspectable and reusable. That may include numerical experiments, simulation models, benchmark studies, documented methods and small software tools. Not everything needs to become a standalone product.
 
-Over time, I hope OEM becomes home to more open methods for energy modelling and scientific computation—**only when they prove useful enough to maintain**.
+EnerLint remains the first active OEM project. Its immediate research questions concern independent physical checks, boundaries, numerical tolerances and comparison with native model diagnostics. Other projects will be added when there is real work to publish—not to fill out an organization chart.
 
 ## Where the questions came from
 
@@ -48,4 +48,4 @@ If you model physical systems, an edge case or a reason a check is redundant is 
 
 ---
 
-<sub>Open Energy Methods is an independent, founder-led open-source initiative. It is not currently a registered company or nonprofit, an accredited verification body, or an official KTH or other institutional initiative.</sub>
+<sub>Open Energy Methods is an independent, creator-maintained research workbench, not a registered company or nonprofit, an accredited verification body, or an official KTH or other institutional initiative.</sub>
