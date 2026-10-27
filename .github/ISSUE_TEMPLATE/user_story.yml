@@ -1,0 +1,39 @@
+name: User story
+description: Plan a testable engineering or research-software improvement.
+title: "STORY | "
+labels: ["agile:story", "workflow:backlog", "type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: "OEM stories must preserve physical assumptions, evidence boundaries and real user value."
+  - type: textarea
+    id: user
+    attributes:
+      label: User story
+      description: "As a [researcher/maintainer/reviewer], I want [capability] so that [observable value]."
+      placeholder: "As a thermal researcher, I want explicit boundary assumptions so that I can independently interpret conservation residuals."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope, inputs and exclusions
+      description: Include source data rights and any physical assumptions, if applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria and reproducible evidence
+      placeholder: "- [ ] Reviewable derivation and tests exist..."
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Parent epic, blockers and dependencies
+  - type: textarea
+    id: scientific
+    attributes:
+      label: Scientific claim boundary
+      description: What does completion establish, and what is NOT demonstrated?
