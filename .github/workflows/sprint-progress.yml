@@ -74,7 +74,7 @@ jobs:
           "| :-- | --: | --: | --: |"]
           for epic in epics:
               refs=set((stream,int(number)) for stream,number in re.findall(
-                  r"https://github\\.com/Open-Energy-Methods/(enerlint|\\.github)/issues/(\\d+)",
+                  r"https://github\.com/Open-Energy-Methods/(enerlint|\.github)/issues/(\d+)",
                   epic.get("body") or ""))
               linked=[index[k] for k in refs if k in index]
               count=sum(1 for issue in linked if done(issue))
