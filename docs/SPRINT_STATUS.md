@@ -4,20 +4,20 @@
 
 | Sprint | Stories | Planned points | Completed points | Progress | To Do | In Progress | In Review | Blocked | Backlog |
 | :-- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
-| [S0](https://github.com/Open-Energy-Methods/.github/issues/34) | 5 | 16 | 3 | 19% | 4 | 0 | 0 | 0 | 0 |
-| [S1](https://github.com/Open-Energy-Methods/.github/issues/35) | 4 | 16 | 3 | 19% | 0 | 0 | 0 | 0 | 3 |
-| [S2](https://github.com/Open-Energy-Methods/.github/issues/36) | 3 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 3 |
-| [S3](https://github.com/Open-Energy-Methods/.github/issues/37) | 3 | 16 | 0 | 0% | 0 | 0 | 0 | 0 | 3 |
+| [S0](https://github.com/Open-Energy-Methods/.github/issues/34) | 4 | 13 | 8 | 62% | 2 | 0 | 0 | 0 | 0 |
+| [S1](https://github.com/Open-Energy-Methods/.github/issues/35) | 4 | 16 | 8 | 50% | 0 | 0 | 1 | 0 | 1 |
+| [S2](https://github.com/Open-Energy-Methods/.github/issues/36) | 3 | 16 | 13 | 81% | 0 | 0 | 0 | 0 | 1 |
+| [S3](https://github.com/Open-Energy-Methods/.github/issues/37) | 3 | 16 | 8 | 50% | 0 | 0 | 0 | 0 | 2 |
 
 ## Epic progress
 
 | Epic | Linked issues | Completed | Progress |
 | :-- | --: | --: | --: |
 | [OEM identity, governance, rights and scientific integrity](https://github.com/Open-Energy-Methods/.github/issues/26) | 8 | 0 | 0% |
-| [EnerLint rigorous thermal verification core](https://github.com/Open-Energy-Methods/.github/issues/27) | 10 | 2 | 20% |
-| [Negative controls, benchmarks and independent differentiation](https://github.com/Open-Energy-Methods/.github/issues/28) | 7 | 0 | 0% |
+| [EnerLint rigorous thermal verification core](https://github.com/Open-Energy-Methods/.github/issues/27) | 10 | 8 | 80% |
+| [Negative controls, benchmarks and independent differentiation](https://github.com/Open-Energy-Methods/.github/issues/28) | 7 | 1 | 14% |
 | [Interoperability and approved external scientific pilots](https://github.com/Open-Energy-Methods/.github/issues/29) | 9 | 0 | 0% |
-| [Trustworthy packaging, research UX and open-source release](https://github.com/Open-Energy-Methods/.github/issues/30) | 9 | 0 | 0% |
+| [Trustworthy packaging, research UX and open-source release](https://github.com/Open-Energy-Methods/.github/issues/30) | 9 | 2 | 22% |
 | [User discovery, KTH Innovation and pilot demand](https://github.com/Open-Energy-Methods/.github/issues/31) | 8 | 0 | 0% |
 | [Commercial/legal diligence and sustainable team](https://github.com/Open-Energy-Methods/.github/issues/32) | 7 | 0 | 0% |
 | [Conditional future scientific methods](https://github.com/Open-Energy-Methods/.github/issues/33) | 7 | 0 | 0% |
